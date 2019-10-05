@@ -5,6 +5,14 @@ Each set and get method has 'self' in it. Kinda like java when we say 'this'
 
 
 class Car:
+
+    def __init__(self, type, model, price, milesDrive, owner):
+        self._Type = type
+        self._Model = model
+        self._Price = price
+        self._MilesDrive = milesDrive
+        self._Owner = owner
+
     def SetType(self, type):
         self._Type = type
 
@@ -40,12 +48,7 @@ class Car:
 
 
 def main():
-    myCar = Car()
-    myCar.SetType("Ford")
-    myCar.SetModel("F150")
-    myCar.SetPrice(35000)
-    myCar.SetMilesDrive(20)
-    myCar.SetOwner("Julio")
+    myCar = Car("Ford", "F150", 35000, 20, "Julio")
 
     # calculate the new price of the vehicle
     CurrentPrice = myCar.GetCurrentPrice()
